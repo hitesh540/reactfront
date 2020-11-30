@@ -31,6 +31,8 @@ const about = () => {
                       Leaf-Meals is the large chain of Restrourants and Tiffine Service providerse.
                       we provides the details of Restrourants and Tiffine services which can helps to find something greate of customers need.
                 </p>
+                <h6  className="cent">Currently We are started registration of Restrourants and Meals. So The registration Fees will Be Between 30Rs To 100Rs.</h6>
+              
                 <br/>
                 <hr/>
                 <h3 className="cent">Restrourants</h3>
@@ -67,7 +69,9 @@ const about = () => {
                         <h6 className="cent">Email - <EmailOutlinedIcon/>nskhitesh2016@gmail.com</h6>
                           <br/>
                           <h6 className="cent">Contact - <CallOutlinedIcon/>8208267094</h6>
-              
+                          <br/>
+                         <h6 className="cent">Registration Fees Between 30Rs To 100Rs</h6>
+
             </div>
             </div>
 
