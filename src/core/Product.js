@@ -47,7 +47,9 @@ const Product = props => {
             <div className="row">
                 <div className="col-8">
                     {product && product.description && (
+
                         <Curd product={product} showViewProductButton={false} />
+
                     )}
                 </div>
 
@@ -55,7 +57,7 @@ const Product = props => {
                <div className="card-body">
 
               <br/><br/>
-               
+
                <ImageUpload item={product} url="product" />
 
                 <br/>
@@ -84,8 +86,8 @@ const Product = props => {
                </div>
 
 
-                <div className="col-4">
-                    <h4>Related products</h4>
+                <div className="col-4" className="mb-3">
+                    <h4>Related product</h4>
                     {relatedProduct.map((p, i) => (
                         <div className="mb-3">
                             <Card key={i} product={p} />

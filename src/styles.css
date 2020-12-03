@@ -73,13 +73,13 @@ background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
  
 
  .imagi {
-    height: 450px;
-    width: 80%;
+    height: 360px;
+    width: 100%;
  }
 
 
  .frame {
-     height: 500px;
+     height: 440px;
     width: 100%;
  }
 
@@ -260,6 +260,8 @@ a:hover {
     font-family: 'Sacramento', cursive;
   }
   
-  
+  .bld{
+    font-size: 150%;
+  }
   
   
