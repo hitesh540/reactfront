@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 import Layout from "./Layout";
 import { getCart } from "./cartHelpers";
 import Card from "./cart";
-import FooterPagePro from "./footer";
-
-
-
-
 
 const Cart = () => {
     const [items, setItems] = useState([]);
@@ -19,7 +14,7 @@ const Cart = () => {
     const showItems = items => {
         return (
             <div>
-                <h2>You has {`${items.length}`} Saved items</h2>
+                <h2>Your cart has {`${items.length}`} items</h2>
                 <hr />
                 {items.map((product, i) => (
                     <Card
@@ -36,27 +31,28 @@ const Cart = () => {
 
     const noItemsMessage = () => (
         <h2>
-            No Saved Post. <br /> <Link to="/shop">Continue Searching</Link>
+            Your cart is empty. <br /> <Link to="/shop">Continue shopping</Link>
         </h2>
     );
 
     return (
         <Layout
-            title="Saved Items"
-            description="Manage your Saved items. View or Remove ."
+            title="Shopping Cart"
+            description="Manage your cart items. Add remove checkout or continue shopping."
             className="container-fluid"
         >
             <div className="row">
-                <div className="col-8">
+                <div className="col-6">
                     {items.length > 0 ? showItems(items) : noItemsMessage()}
                 </div>
 
-              
+                <div className="col-6">
+                    <p>
+                        show checkout options/shipping address/total/update
+                        quantity
+                    </p>
+                </div>
             </div>
-
-
-
-            
         </Layout>
     );
 };

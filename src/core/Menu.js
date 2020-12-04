@@ -20,7 +20,7 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/")}
                     to="/"
                 >
-                    HOME
+                    Home
                 </Link>
             </li>
 
@@ -30,10 +30,9 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/shop")}
                     to="/shop"
                 >
-                    SHOP
+                    Shop
                 </Link>
             </li>
-
 
             <li className="nav-item">
                 <Link
@@ -41,24 +40,12 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/cart")}
                     to="/cart"
                 >
-                    SAVED ITEMS{" "}
+                    Cart{" "}
                     <sup>
                         <small className="cart-badge">{itemTotal()}</small>
                     </sup>
                 </Link>
             </li>
-
-
-            <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/about")}
-                    to="/about"
-                >
-                    ABOUT US
-                </Link>
-            </li>
-
 
             {isAuthenticated() && isAuthenticated().user.role === 0 && (
                 <li className="nav-item">
@@ -67,7 +54,7 @@ const Menu = ({ history }) => (
                         style={isActive(history, "/user/dashboard")}
                         to="/user/dashboard"
                     >
-                        DASHBOARD
+                        Dashboard
                     </Link>
                 </li>
             )}
@@ -79,7 +66,7 @@ const Menu = ({ history }) => (
                         style={isActive(history, "/admin/dashboard")}
                         to="/admin/dashboard"
                     >
-                        DASHBOARD
+                        Dashboard
                     </Link>
                 </li>
             )}
@@ -92,7 +79,7 @@ const Menu = ({ history }) => (
                             style={isActive(history, "/signin")}
                             to="/signin"
                         >
-                            SIGNIN
+                            Signin
                         </Link>
                     </li>
 
@@ -102,13 +89,11 @@ const Menu = ({ history }) => (
                             style={isActive(history, "/signup")}
                             to="/signup"
                         >
-                            SIGNUP
+                            Signup
                         </Link>
                     </li>
                 </Fragment>
             )}
-
-
 
             {isAuthenticated() && (
                 <li className="nav-item">
@@ -121,7 +106,7 @@ const Menu = ({ history }) => (
                             })
                         }
                     >
-                        SIGNOUT
+                        Signout
                     </span>
                 </li>
             )}

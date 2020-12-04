@@ -3,8 +3,8 @@ import Menu from "./Menu";
 import "../styles.css";
 
 const Layout = ({
-    title = "",
-    description = "",
+    title = "Title",
+    description = "Description",
     className,
     children
 }) => (

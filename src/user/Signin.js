@@ -3,8 +3,6 @@ import { Redirect } from "react-router-dom";
 import Layout from "../core/Layout";
 import { signin, authenticate, isAuthenticated } from "../auth/index";
 
-
-
 const Signin = () => {
     const [values, setValues] = useState({
         email: "",
@@ -97,15 +95,13 @@ const Signin = () => {
     return (
         <Layout
             title="Signin"
-            description="Signin to Get Better Search Experience"
+            description="Signin to Node React E-commerce App"
             className="container col-md-8 offset-md-2"
         >
             {showLoading()}
             {showError()}
             {signUpForm()}
             {redirectUser()}
-
-
         </Layout>
     );
 };

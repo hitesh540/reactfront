@@ -15,7 +15,7 @@ const Dashboard = () => {
                 <ul className="list-group">
                     <li className="list-group-item">
                         <Link className="nav-link" to="/cart">
-                            Saved Post
+                            My Cart
                         </Link>
                     </li>
                     <li className="list-group-item">
@@ -56,8 +56,8 @@ const Dashboard = () => {
 
     return (
         <Layout
-            title={`Welcome ${name}!`}
-            description=""
+            title="Dashboard"
+            description={`G'day ${name}!`}
             className="container-fluid"
         >
             <div className="row">
