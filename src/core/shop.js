@@ -4,7 +4,10 @@ import Card from "./cart";
 import { getCategories, getFilteredProducts } from "./apiCore";
 import Checkbox from "./Checkbox";
 import RadioBox from "./RadioBox";
-import { prices } from "./fixedPrices";
+import FooterPagePro from "./footer";
+
+
+
 
 const Shop = () => {
     const [myFilters, setMyFilters] = useState({
@@ -84,26 +87,18 @@ const Shop = () => {
     };
 
     const handlePrice = value => {
-        const data = prices;
-        let array = [];
-
-        for (let key in data) {
-            if (data[key]._id === parseInt(value)) {
-                array = data[key].array;
-            }
-        }
-        return array;
+        
     };
 
     return (
         <Layout
-            title="Shop Page"
-            description="Search and find books of your choice"
+            title="RESTRAURANTS AND TIFFINES"
+            description="Search Anything of your choice"
             className="container-fluid"
         >
             <div className="row">
                 <div className="col-4">
-                    <h4>Filter by categories</h4>
+                    <h4>Filter by City</h4>
                     <ul>
                         <Checkbox
                             categories={categories}
@@ -113,22 +108,13 @@ const Shop = () => {
                         />
                     </ul>
 
-                    <h4>Filter by price range</h4>
-                    <div>
-                        <RadioBox
-                            prices={prices}
-                            handleFilters={filters =>
-                                handleFilters(filters, "price")
-                            }
-                        />
-                    </div>
                 </div>
 
-                <div className="col-8">
-                    <h2 className="mb-4">Products</h2>
+                <div className="col-8"> 
+                    <h2 className="mb-4">Posts</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                            <div key={i} className="col-4 mb-3">
+                            <div key={i} className=" ml-3 mb-3">
                                 <Card product={product} />
                             </div>
                         ))}
@@ -137,6 +123,13 @@ const Shop = () => {
                     {loadMoreButton()}
                 </div>
             </div>
+ 
+
+            <div  className="futer">
+            <FooterPagePro/>
+            </div>
+
+
         </Layout>
     );
 };

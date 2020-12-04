@@ -3,6 +3,10 @@ import Layout from "./Layout";
 import { getProducts } from "./apiCore";
 import Card from "./cart";
 import Search from "./Search";
+import FooterPagePro from "./footer";
+import EcoIcon from '@material-ui/icons/Eco';
+
+
 
 const Home = () => {
     const [productsBySell, setProductsBySell] = useState([]);
@@ -36,28 +40,26 @@ const Home = () => {
 
     return (
         <Layout
-            title="Home Page"
-            description="Node React E-commerce App"
+            title="LEAF-MEALS"
+            description="Find Here Something Great For Yourself"
             className="container-fluid"
         >
+       
             <Search />
             <h2 className="mb-4">New Arrivals</h2>
             <div className="row">
                 {productsByArrival.map((product, i) => (
-                    <div key={i} className="col-4 mb-3">
+                    <div key={i} className=" ml-2 mb-3">
                         <Card product={product} />
                     </div>
                 ))}
             </div>
 
-            <h2 className="mb-4">Best Sellers</h2>
-            <div className="row">
-                {productsBySell.map((product, i) => (
-                    <div key={i} className="col-4 mb-3">
-                        <Card product={product} />
-                    </div>
-                ))}
+            <div  className="futer">
+            <FooterPagePro/>
             </div>
+
+
         </Layout>
     );
 };

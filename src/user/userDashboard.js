@@ -10,12 +10,12 @@ const Dashboard = () => {
 
     const userLinks = () => {
         return (
-            <div className="card">
+            <div className="card mb-5">
                 <h4 className="card-header">User Links</h4>
                 <ul className="list-group">
                     <li className="list-group-item">
                         <Link className="nav-link" to="/cart">
-                            My Cart
+                            Saved Post
                         </Link>
                     </li>
                     <li className="list-group-item">
@@ -56,12 +56,12 @@ const Dashboard = () => {
 
     return (
         <Layout
-            title="Dashboard"
-            description={`G'day ${name}!`}
+            title={`Welcome ${name}!`}
+            description=""
             className="container-fluid"
         >
             <div className="row">
-                <div className="col-3">{userLinks()}</div>
+                <div className="col-9">{userLinks()}</div>
                 <div className="col-9">
                     {userInfo()}
                     

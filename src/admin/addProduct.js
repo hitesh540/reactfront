@@ -4,16 +4,34 @@ import { isAuthenticated } from "../auth/index";
 import { Link } from "react-router-dom";
 import { createProduct, getCategories } from "./apiAdmin";
 
+
+
 const AddProduct = () => {
     const [values, setValues] = useState({
         name: "",
         description: "",
-        price: "",
+        address: "",
+        email: "",
+        number: "",
+        text: "",
+        fhoto: "",
+        ghoto: "",
+        para: "",
+
+        // imageUrl: "",
+        
+        // price: "",
+
         categories: [],
         category: "",
-        shipping: "",
-        quantity: "",
-        photo: "",
+
+        // shipping: "",
+
+        // quantity: "",
+
+         photo: "",
+
+
         loading: false,
         error: "",
         createdProduct: "",
@@ -25,11 +43,25 @@ const AddProduct = () => {
     const {
         name,
         description,
-        price,
+        address,
+        email,
+        number,
+        text,
+        fhoto,
+        ghoto,
+        para,
+
+        // imageUrl,
+        
+        // price,
+         
         categories,
         category,
-        shipping,
-        quantity,
+
+        // shipping,
+
+        // quantity,
+
         loading,
         error,
         createdProduct,
@@ -56,12 +88,22 @@ const AddProduct = () => {
         init();
     }, []);
 
+
+
     const handleChange = name => event => {
+
         const value =
             name === "photo" ? event.target.files[0] : event.target.value;
         formData.set(name, value);
-        setValues({ ...values, [name]: value });
+
+        setValues({ ...values, [name]: value  });
+
     };
+
+
+   
+
+
 
     const clickSubmit = event => {
         event.preventDefault();
@@ -76,8 +118,21 @@ const AddProduct = () => {
                     name: "",
                     description: "",
                     photo: "",
-                    price: "",
-                    quantity: "",
+                    
+                    address: "",
+                    email: "",
+                    number: "",
+                    text: "",
+                    fhoto: "",
+                    ghoto: "",
+                    para: "",
+
+                    // imageUrl: "",
+
+                    // price: "",
+
+                    // quantity: "",
+
                     loading: false,
                     createdProduct: data.name
                 });
@@ -88,16 +143,23 @@ const AddProduct = () => {
     const newPostForm = () => (
         <form className="mb-3" onSubmit={clickSubmit}>
             <h4>Post Photo</h4>
+
+           
+
             <div className="form-group">
                 <label className="btn btn-secondary">
                     <input
                         onChange={handleChange("photo")}
                         type="file"
                         name="photo"
+                        multiple
                         accept="image/*"
                     />
                 </label>
             </div>
+
+
+
 
             <div className="form-group">
                 <label className="text-muted">Name</label>
@@ -109,6 +171,34 @@ const AddProduct = () => {
                 />
             </div>
 
+
+           
+
+            <div className="form-group">
+                <label className="text-muted">Address</label>
+                <input
+                    onChange={handleChange("address")}
+                    type="text"
+                    className="form-control"
+                    value={address}
+                />
+            </div>
+
+
+
+            <div className="form-group">
+                <label className="text-muted">Paragraph</label>
+                <input
+                    onChange={handleChange("para")}
+                    type="text"
+                    className="form-control"
+                    value={para}
+                />
+            </div>
+
+
+
+
             <div className="form-group">
                 <label className="text-muted">Description</label>
                 <textarea
@@ -118,15 +208,7 @@ const AddProduct = () => {
                 />
             </div>
 
-            <div className="form-group">
-                <label className="text-muted">Price</label>
-                <input
-                    onChange={handleChange("price")}
-                    type="number"
-                    className="form-control"
-                    value={price}
-                />
-            </div>
+
 
             <div className="form-group">
                 <label className="text-muted">Category</label>
@@ -144,27 +226,66 @@ const AddProduct = () => {
                 </select>
             </div>
 
-            <div className="form-group">
-                <label className="text-muted">Shipping</label>
-                <select
-                    onChange={handleChange("shipping")}
-                    className="form-control"
-                >
-                    <option>Please select</option>
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
-                </select>
-            </div>
+
+
 
             <div className="form-group">
-                <label className="text-muted">Quantity</label>
+                <label className="text-muted">Email</label>
                 <input
-                    onChange={handleChange("quantity")}
-                    type="number"
+                    onChange={handleChange("email")}
+                    type="text"
                     className="form-control"
-                    value={quantity}
+                    value={email}
                 />
             </div>
+
+
+
+            <div className="form-group">
+                <label className="text-muted">Number</label>
+                <input
+                    onChange={handleChange("number")}
+                    type="number"
+                    className="form-control"
+                    value={number}
+                />
+            </div>
+
+
+
+            <div className="form-group">
+                <label className="text-muted">Iframe</label>
+                <input
+                    onChange={handleChange("text")}
+                    type="text"
+                    className="form-control"
+                    value={text}
+                />
+            </div>
+
+
+            <div className="form-group">
+                <label className="text-muted">Days</label>
+                <input
+                    onChange={handleChange("fhoto")}
+                    type="text"
+                    className="form-control"
+                    value={fhoto}
+                />
+            </div>
+
+
+            <div className="form-group">
+                <label className="text-muted">Time</label>
+                <input
+                    onChange={handleChange("ghoto")}
+                    type="text"
+                    className="form-control"
+                    value={ghoto}
+                />
+            </div>
+
+           
 
             <button className="btn btn-outline-primary">Create Product</button>
         </form>
