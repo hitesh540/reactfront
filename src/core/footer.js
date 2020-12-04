@@ -43,20 +43,16 @@ const FooterPagePro = () => {
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="5" lg="3">
-            <h5 className="text-uppercase mb-4 font-weight-bold">Contact Details</h5>
+            <h5 className="text-uppercase mb-4 font-weight-bold">Address</h5>
             <p>
-              <span className="bld">Hitesh Borse</span>(Founder)
+              <i className="fa fa-home mr-3" /> Nardane, Dhule
             </p>
             <p>
-              nskhitesh2016@gmail.com
+              <i className="fa fa-envelope mr-3" />nskhitesh2016@gmail.com
             </p>
             <p>
-               8208267094
+              <i className="fa fa-phone mr-3" /> 8208267094
             </p>
-            <p>
-               Nardane, Dhule
-            </p>
-           
             
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
@@ -85,7 +81,7 @@ const FooterPagePro = () => {
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="/">www.leaf-meals.com </a>
+          <a href="#">Leaf-Meals.com </a>
         </MDBContainer>
       </div>
     </MDBFooter>

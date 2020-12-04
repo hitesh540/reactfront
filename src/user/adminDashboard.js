@@ -10,8 +10,7 @@ const AdminDashboard = () => {
 
     const adminLinks = () => {
         return (
-            <div className="card mb-5">
-            
+            <div className="card">
                 <h4 className="card-header">Admin Links</h4>
                 <ul className="list-group">
                     <li className="list-group-item">
@@ -31,7 +30,6 @@ const AdminDashboard = () => {
                     </li>
                 </ul>
             </div>
-            
         );
     };
 
@@ -57,7 +55,7 @@ const AdminDashboard = () => {
             className="container-fluid"
         >
             <div className="row">
-                <div className="col-9">{adminLinks()}</div>
+                <div className="col-3">{adminLinks()}</div>
                 <div className="col-9">{adminInfo()}</div>
             </div>
         </Layout>

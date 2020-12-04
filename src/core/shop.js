@@ -98,7 +98,7 @@ const Shop = () => {
         >
             <div className="row">
                 <div className="col-4">
-                    <h4>Filter by City</h4>
+                    <h4>Filter by categories</h4>
                     <ul>
                         <Checkbox
                             categories={categories}
@@ -110,11 +110,11 @@ const Shop = () => {
 
                 </div>
 
-                <div className="col-8"> 
+                <div className="col-8">
                     <h2 className="mb-4">Posts</h2>
                     <div className="row">
                         {filteredResults.map((product, i) => (
-                            <div key={i} className=" ml-3 mb-3">
+                            <div key={i} className="col-4 mb-3">
                                 <Card product={product} />
                             </div>
                         ))}
@@ -123,7 +123,7 @@ const Shop = () => {
                     {loadMoreButton()}
                 </div>
             </div>
- 
+
 
             <div  className="futer">
             <FooterPagePro/>
