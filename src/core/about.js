@@ -14,9 +14,8 @@ const about = () => {
             description="The Hub Of Restrourants And Meal Servises"
             className="container-fluid" >
             
-           
             <div className="row">
-            <h2 className="head">ABOUT US</h2>
+            <h2 className="head">ABOUT</h2>
             </div>
 
             <br/>
@@ -56,7 +55,7 @@ const about = () => {
 
                 <p className="lead mt-2" >
                      The  Chain of Tiffine  Services .
-                      here  the tiffines are available for any area as per the locations. the best Tiffine Service can be available as per  the locations of customers.
+                      here  the tiffines are available in any Area. We provides the details of Meal. The Tiffine Service can be available as per  the locations of customers.
                 </p>
                 <br/>
                 <hr/>
