@@ -53,7 +53,7 @@ const Product = props => {
                     )}
                 </div>
 
-                <div className="col-8">
+                <div className="col-10">
                <div className="card-body">
 
               <br/><br/>

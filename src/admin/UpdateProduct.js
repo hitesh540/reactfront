@@ -7,6 +7,7 @@ import { getProduct, getCategories, updateProduct } from "./apiAdmin";
 const UpdateProduct = ({ match }) => {
     const [values, setValues] = useState({
         name: "",
+        address: "",
         description: "",
         number: "",
         email: "",
@@ -36,6 +37,7 @@ const UpdateProduct = ({ match }) => {
     const { user, token } = isAuthenticated();
     const {
         name,
+        address,
         description,
         email,
         number,
@@ -68,6 +70,7 @@ const UpdateProduct = ({ match }) => {
                 setValues({
                     ...values,
                     name: data.name,
+                    address: data.address,
                     description: data.description,
                     number: data.number,
                     email: data.email,
@@ -131,6 +134,7 @@ const UpdateProduct = ({ match }) => {
                     setValues({
                         ...values,
                         name: "",
+                        address: "",
                         description: "",
                         photo: "",
                        
@@ -182,6 +186,15 @@ const UpdateProduct = ({ match }) => {
                 />
             </div>
 
+            <div className="form-group">
+                <label className="text-muted">Address</label>
+                <input
+                    onChange={handleChange("address")}
+                    type="text"
+                    className="form-control"
+                    value={address}
+                />
+            </div>
 
             <div className="form-group">
                 <label className="text-muted">Paragraph</label>
