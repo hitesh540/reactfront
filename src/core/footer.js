@@ -19,8 +19,8 @@ const FooterPagePro = () => {
             </h5>
           
             <p>
-            Leaf-Meals is the large chain of Restrourants and Tiffine Service providerse.
-                      we provides the details of Restrourants and Tiffine services which can helps to find something greate of customers need.
+            Leaf-Meals is the large chain of Restraurants and Tiffine Service providerse.
+                      we provides the details of Restraurants and Tiffine services which can helps to find something greate of customers need.
             </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />

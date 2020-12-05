@@ -11,7 +11,7 @@ const about = () => {
     return (
         <Layout
             title="LEAF-MEALS"
-            description="The Hub Of Restrourants And Meal Servises"
+            description="The Hub Of Restraurants And Meal Servises"
             className="container-fluid" >
             
             <div className="row">
@@ -27,10 +27,10 @@ const about = () => {
              <h3>Leaf-Meals</h3>
 
                 <p className="lead mt-2" >
-                      The large chain of Restrourants and Tiffine Service providerse.
-                      we provides the details of Restrourants and Tiffine services which can help to find something greate of Your need.
+                      The large chain of Restraurants and Tiffine Service providerse.
+                      we provides the details of Restraurant and Tiffine services which can help to find something greate of Your need.
                 </p>
-                <h6  >Currently We are started registration of Restrourants and Meals in Dhule City On The Smallest amount of charge. The  registration Fees will Be Between 30Rs To 100Rs. </h6>
+                <h6  >Currently We are started registration of Restraurants and Meals in Dhule City On The Smallest amount of charge. The  registration Fees will Be Between 30Rs To 100Rs. </h6>
               
                 <br/>
                 <hr/>
@@ -40,8 +40,8 @@ const about = () => {
               <br/><br/>
 
                 <p className="lead mt-2">
-                     The large Chain of Restrourants . We Helps to find a perfect Restrourant to your need. 
-                      Here  the details of Restrourants can be found and  We helps to get it near to customers locations.
+                     The large Chain of Restraurants . We Helps to find a perfect One to your need. 
+                      Here  the details of Restraurants can be found and  We helps to get it near to customers locations.
                 </p>
 
               <br/>
@@ -71,8 +71,7 @@ const about = () => {
                           <br/>
                           <h6 >Contact - <CallOutlinedIcon/>8208267094</h6>
                           <br/>
-                         <h6 >Registration Fees Between 30Rs To 100Rs</h6>
-
+                         
             </div>
             </div>
 
